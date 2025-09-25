@@ -1,212 +1,197 @@
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
-
+/* ===========================
+   General Styles
+=========================== */
 body {
-  background: #f0f0f0;
-  color: #333;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
-/* Header */
-.site-header {
-  background: white;
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-.site-header img {
-  height: 60px;
-  width: auto;
+h2, h3 {
+    margin: 0.5em 0;
 }
 
-.header-nav {
-  display: flex;
-  gap: 15px;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-.header-nav a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
+/* ===========================
+   Header & Logo
+=========================== */
+.site-logo {
+    height: 60px;
+    display: block;
+    margin: 20px auto;
 }
 
-.header-nav a:hover {
-  color: blue;
-}
-
-/* Buttons */
-.btn {
-  padding: 8px 14px;
-  border-radius: 5px;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.btn.primary {
-  background: blue;
-  color: white;
-}
-
-.btn.primary:hover {
-  background: darkblue;
-}
-
-.btn.ghost {
-  border: 1px solid blue;
-  color: blue;
-}
-
-.btn.ghost:hover {
-  background: blue;
-  color: white;
-}
-
-/* Banner */
+/* ===========================
+   Banner
+=========================== */
 .main-banner {
-  background: linear-gradient(120deg, blue, skyblue);
-  text-align: center;
-  padding: 50px 20px;
-  color: white;
-  margin: 20px;
-  border-radius: 8px;
+    background: linear-gradient(135deg, #6c63ff, #00c6ff);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
 }
 
 .main-banner h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
+    font-size: 3em;
+    margin-bottom: 10px;
 }
 
-.main-banner p {
-  font-size: 16px;
-  margin-bottom: 15px;
+.banner-highlight {
+    font-size: 1.5em;
+    margin-bottom: 20px;
 }
 
-/* Courses */
+.btn-banner {
+    background-color: #fff;
+    color: #6c63ff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-banner:hover {
+    background-color: #6c63ff;
+    color: #fff;
+}
+
+/* ===========================
+   Courses Section
+=========================== */
 .courses-section {
-  text-align: center;
-  margin: 30px;
+    padding: 50px 20px;
+    text-align: center;
 }
 
 .courses-section h3 {
-  margin-bottom: 15px;
+    font-size: 2em;
+    margin-bottom: 40px;
 }
 
 .courses-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
 }
 
 .course-card {
-  background: white;
-  padding: 15px;
-  border-radius: 8px;
-  transition: 0.3s;
+    padding: 25px 15px;
+    border-radius: 15px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
 
 .course-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
 }
 
-/* Dashboard */
-.dashboard {
-  background: white;
-  margin: 20px;
-  padding: 20px;
-  border-radius: 8px;
-  text-align: center;
+.course-icon {
+    display: block;
+    font-size: 2em;
+    margin-bottom: 10px;
 }
 
-.dashboard h2 {
-  margin-bottom: 10px;
+/* Color classes for static fallback */
+.course-purple { background-color: #6c63ff; }
+.course-yellow { background-color: #ffca28; color: #333; }
+.course-green  { background-color: #4caf50; }
+.course-pink   { background-color: #e91e63; }
+.course-orange { background-color: #ff9800; }
+.course-blue   { background-color: #2196f3; }
+
+/* ===========================
+   Contact & Signup
+=========================== */
+.main-content {
+    padding: 50px 20px;
+    text-align: center;
 }
 
-.grid {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
+.main-content h2 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
 }
 
-.stat {
-  background: #f7f7f7;
-  padding: 10px;
-  border-radius: 6px;
+.main-content p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
 }
 
-.stat strong {
-  color: blue;
-  font-size: 20px;
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 20px auto;
 }
 
-/* Games */
-.centered-card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 60vh;
+form input {
+    padding: 12px 15px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1em;
 }
 
-.card {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  max-width: 350px;
-  text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+form button {
+    padding: 12px 15px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #6c63ff;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-/* Footer */
-.site-footer {
-  background: #222;
-  color: #ccc;
-  padding: 20px;
-  margin-top: 40px;
+form button:hover {
+    background-color: #5a54d1;
 }
 
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 15px;
+p a {
+    color: #6c63ff;
 }
 
-.footer-col h4 {
-  margin-bottom: 10px;
-  color: white;
+p a:hover {
+    text-decoration: underline;
 }
 
-.footer-col a {
-  color: #bbb;
-  text-decoration: none;
-  display: block;
-  margin-bottom: 6px;
+/* ===========================
+   Footer
+=========================== */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
 }
 
-.footer-col a:hover {
-  color: white;
-}
-
-.footer-bottom {
-  margin-top: 20px;
-  font-size: 14px;
-  color: #999;
-  text-align: center;
-  border-top: 1px solid #444;
-  padding-top: 10px;
-}
-
-/* Mobile */
+/* ===========================
+   Responsive
+=========================== */
 @media (max-width: 768px) {
-  .site-header {
-    flex-direction: column;
-  }
-  .grid {
-    flex-direction: column;
-  }
+    .main-banner h2 {
+        font-size: 2.2em;
+    }
+    .banner-highlight {
+        font-size: 1.2em;
+    }
 }
